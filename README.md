@@ -120,6 +120,7 @@ train_model(
 │   └── __init__.py
 ├── example/
     ├── dog_breed_identifier.py
+    └── simple_image_classifier.py 
 ├── nn/                    # Neural Network modules
 │   ├── modules.py         # Base Module, Linear, Conv2d, etc.
 │   └── __init__.py
