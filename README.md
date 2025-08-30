@@ -41,11 +41,11 @@ Clone the repo and install dependencies:
 ```bash
 git clone https://github.com/dhaval-gamet/lowmind.git
 cd custom_deep_learning_framework
-pip install -r requirements.txt
+pip install -r requirements.txt```
 
 
 ---
-
+```
 📖 Usage
 
 1️⃣ Building a Neural Network
@@ -70,12 +70,11 @@ class SimpleNN(Module):
         return self.layers(x)
 
 # Instantiate the model
-model = SimpleNN()
-
+model = SimpleNN()```
 
 ---
 
-2️⃣ Training Your Model
+```2️⃣ Training Your Model
 
 import numpy as np
 from optim.optimizers import Adam
@@ -108,7 +107,7 @@ train_model(
     optimizer=optimizer,
     criterion=criterion,
     epochs=10
-)
+)```
 
 
 ---
