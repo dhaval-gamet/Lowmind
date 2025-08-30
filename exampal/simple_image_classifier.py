@@ -1,4 +1,4 @@
-# Zaroori modules import karein
+
 import numpy as np
 import os
 from core.tensor import Tensor, memory_manager
