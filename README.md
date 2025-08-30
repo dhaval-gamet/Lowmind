@@ -107,8 +107,7 @@ train_model(
     optimizer=optimizer,
     criterion=criterion,
     epochs=10
-)
-
+)```
 
 ---
 
