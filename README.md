@@ -107,11 +107,11 @@ train_model(
     optimizer=optimizer,
     criterion=criterion,
     epochs=10
-)```
+)
 
 ---
 
-📂 Project Structure
+```📂 Project Structure
 
 .
 ├── core/                  # Foundational components
@@ -143,7 +143,7 @@ train_model(
 
 ---
 
-🤝 Contributing
+```🤝 Contributing
 
 We welcome contributions! 🎉
 
