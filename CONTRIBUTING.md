@@ -21,8 +21,8 @@ Pull requests are the best way to contribute code. We appreciate clean code, des
 1.  **Fork the Repository:** Create a copy of the repository on your GitHub account.
 2.  **Clone Your Fork:** Clone your forked repository to your local machine.
     ```bash
-    git clone [https://github.com/yourusername/custom_deep_learning_framework.git](https://github.com/yourusername/custom_deep_learning_framework.git)
-    cd custom_deep_learning_framework
+    git clone [https://github.com/dhaval-gamet/lowmind.git](https://github.com/dhaval-gamet/lowmind.git)
+    lowmind
     ```
 3.  **Create a New Branch:** Always work on a new branch, giving it a descriptive name (e.g., `feature/add-tanh-layer` or `fix/conv-padding-bug`).
     ```bash
