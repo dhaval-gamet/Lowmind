@@ -39,7 +39,7 @@ Whether you're a **student**, a **curious developer**, or an **aspiring research
 Clone the repo and install dependencies:
 
 ```bash
-git clone https://github.com/yourusername/custom_deep_learning_framework.git
+git clone https://github.com/dhaval-gamet/lowmind.git
 cd custom_deep_learning_framework
 pip install -r requirements.txt
 
@@ -163,12 +163,4 @@ Feel free to fork the repo, open an issue, or submit a pull request.
 This project is licensed under the MIT License.
 See LICENSE for more details.
 
-
----
-
----
-
-👉 ये अब पूरा professional **README.md** है – तू इसको सीधा अपने repo में डाल सकता है।  
-
-क्या मैं तुझे इसके साथ **MIT LICENSE का ready text** भी लिखकर दूँ, ताकि तू copy-paste करके repo में डाल सके?
 
