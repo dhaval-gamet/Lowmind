@@ -45,7 +45,7 @@ pip install -r requirements.txt```
 
 
 ---
-``
+
 📖 Usage
 
 1️⃣ Building a Neural Network
@@ -72,8 +72,8 @@ class SimpleNN(Module):
 # Instantiate the model
 model = SimpleNN()
 
----``
-``
+---
+
 2️⃣ Training Your Model
 
 import numpy as np
@@ -110,7 +110,7 @@ train_model(
 )
 
 
----``
+---
 
 📂 Project Structure
 
