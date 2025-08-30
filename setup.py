@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='custom_deep_learning_framework',
+    name='lomind',
     version='0.1.0',
     author='Dhaval',
     author_email="gametidhaval980@gmail.com",
