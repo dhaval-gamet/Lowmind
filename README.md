@@ -45,7 +45,7 @@ pip install -r requirements.txt```
 
 
 ---
-```
+``
 📖 Usage
 
 1️⃣ Building a Neural Network
@@ -70,11 +70,11 @@ class SimpleNN(Module):
         return self.layers(x)
 
 # Instantiate the model
-model = SimpleNN()```
+model = SimpleNN()
 
----
-
-```2️⃣ Training Your Model
+---``
+``
+2️⃣ Training Your Model
 
 import numpy as np
 from optim.optimizers import Adam
@@ -107,10 +107,10 @@ train_model(
     optimizer=optimizer,
     criterion=criterion,
     epochs=10
-)```
+)
 
 
----
+---``
 
 📂 Project Structure
 
