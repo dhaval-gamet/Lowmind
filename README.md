@@ -119,6 +119,8 @@ train_model(
 ├── core/                  # Foundational components
 │   ├── tensor.py          # Tensor class with autograd
 │   └── __init__.py
+├── example/
+    ├── 
 ├── nn/                    # Neural Network modules
 │   ├── modules.py         # Base Module, Linear, Conv2d, etc.
 │   └── __init__.py
