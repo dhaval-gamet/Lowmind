@@ -41,16 +41,17 @@ Clone the repo and install dependencies:
 ```bash
 git clone https://github.com/dhaval-gamet/lowmind.git
 cd custom_deep_learning_framework
-pip install -r requirements.txt```
+pip install -r requirements.txt
+```
 
 
 ---
 
 📖 Usage
 
-1️⃣ Building a Neural Network
+```1️⃣ Building a Neural Network
 
-```from nn.modules import Module, Linear, Sequential, Dropout
+from nn.modules import Module, Linear, Sequential, Dropout
 from core.tensor import Tensor
 
 class SimpleNN(Module):
