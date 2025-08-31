@@ -111,7 +111,6 @@ train_model(
 )
 ```
 
----
 
 ```📂 Project Structure
 
@@ -143,7 +142,6 @@ train_model(
 └── README.md              # You are here!
 
 ```
----
 
 ```🤝 Contributing
 
@@ -159,7 +157,7 @@ Fix a bug
 Feel free to fork the repo, open an issue, or submit a pull request.
 
 
----
+
 
 📄 License
 
