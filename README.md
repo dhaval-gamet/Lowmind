@@ -50,7 +50,7 @@ pip install -r requirements.txt```
 
 1️⃣ Building a Neural Network
 
-from nn.modules import Module, Linear, Sequential, Dropout
+```from nn.modules import Module, Linear, Sequential, Dropout
 from core.tensor import Tensor
 
 class SimpleNN(Module):
@@ -71,6 +71,7 @@ class SimpleNN(Module):
 
 # Instantiate the model
 model = SimpleNN()
+```
 
 ---
 
