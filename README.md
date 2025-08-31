@@ -73,9 +73,8 @@ class SimpleNN(Module):
 model = SimpleNN()
 ```
 
----
 
-2️⃣ Training Your Model
+```2️⃣ Training Your Model
 
 import numpy as np
 from optim.optimizers import Adam
@@ -109,6 +108,7 @@ train_model(
     criterion=criterion,
     epochs=10
 )
+```
 
 ---
 
