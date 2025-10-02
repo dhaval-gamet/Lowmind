@@ -53,7 +53,7 @@ That's it! No other dependencies required.
 
 ### Option 1: Direct Download
 ```bash
-git clone https://github.com/yourusername/lowmind.git
+git clone https://github.com/dhaval-gamet/lowmind.git
 cd lowmind
 ```
 
