@@ -3,7 +3,7 @@
 
 <div align="center">
 
-![LowMind Logo](logo.png)
+![LowMind Logo](file_0000000047fc61f989cc1e0e0b80bf75.png)
 [![Python Version](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
