@@ -3,8 +3,6 @@
 
 <div align="center">
 
-![LowMind Logo](https://via.placeholder.com/150x150/4A90E2/FFFFFF?text=LM)
-<!-- You can add your actual logo here -->
 ![LowMind Logo](logo.png)
 [![Python Version](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
