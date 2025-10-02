@@ -271,15 +271,10 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 
 ### Development Setup
 ```bash
-git clone https://github.com/yourusername/lowmind.git
+git clone https://github.com/dhaval-gamet/lowmind.git
 cd lowmind
 # Install in development mode
 pip install -e .
-```
-
-### Running Tests
-```bash
-python -m pytest tests/
 ```
 
 ## 📝 License
@@ -294,9 +289,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- 📧 **Email**: support@lowmind.dev
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/lowmind/discussions)
-- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/yourusername/lowmind/issues)
+- 📧 **Email**: gametidhaval980@gmail.com
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/dhaval-gamet/lowmind/discussions)
+- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/dhaval-gamet/lowmind/issues)
 
 ## 🚧 Roadmap
 
