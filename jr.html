@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gameti Dhavalkumar - Interactive Resume india</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6C63FF; /* Violet */
+            --secondary: #00BFA6; /* Teal */
+            --accent: #FF6584;   /* Pink */
+            --dark: #2D3748;     /* Dark Grey */
+            --light: #F7FAFC;    /* Off-white */
+            --text: #4A5568;     /* Medium Grey */
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Blue-Purple */
+            --card-shadow: 0 8px 20px rgba(0,0,0,0.08); /* Softer shadow */
+            --border-radius: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: #f9f9f9;
+            background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.03) 1px, transparent 0);
+            background-size: 20px 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header {
+            background: var(--bg-gradient);
+            color: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            margin-bottom: 40px;
+            box-shadow: var(--card-shadow);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            animation: slideIn 0.8s ease-out;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            transform: rotate(30deg);
+            z-index: -1;
+            animation: pulseBg 15s infinite linear;
+        }
+
+        @keyframes pulseBg {
+            0% { transform: rotate(30deg) scale(1); }
+            50% { transform: rotate(30deg) scale(1.1); }
+            100% { transform: rotate(30deg) scale(1); }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        h1 {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -0.8px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 70px;
+            height: 5px;
+            background: var(--accent);
+            border-radius: 2.5px;
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            margin-top: 15px;
+            font-weight: 300;
+        }
+
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            background: rgba(255,255,255,0.15);
+            padding: 8px 15px;
+            border-radius: 30px;
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-3px) scale(1.02);
+            background: rgba(255,255,255,0.25);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--dark);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            margin: 50px 0 25px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+            animation: underlineExpand 0.5s ease-out forwards;
+        }
+
+        @keyframes underlineExpand {
+            from { width: 0; }
+            to { width: 50px; }
+        }
+
+        .section {
+            margin-bottom: 45px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            border-left: 5px solid var(--secondary);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+            border-left-color: var(--primary);
+        }
+
+        .skill-category h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: var(--dark);
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .skill-category h3 i {
+            color: var(--primary);
+            font-size: 1.4rem;
+            transition: transform 0.3s ease;
+        }
+        .skill-category:hover h3 i {
+            transform: scale(1.1);
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 28px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        li:hover {
+            color: var(--primary);
+            transform: translateX(3px);
+        }
+
+        li::before {
+            content: '›';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 25px;
+            padding: 30px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-item:hover, .education-item:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+
+        .experience-item::after, .education-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+        }
+
+        .job-title, .degree {
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .job-title i, .degree i {
+            color: var(--primary);
+        }
+
+        .company, .institution {
+            font-weight: 500;
+            color: var(--secondary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .company i, .institution i {
+            color: var(--secondary);
+        }
+
+        .date {
+            color: var(--text);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            opacity: 0.85;
+        }
+        .date i {
+            color: var(--text);
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, rgba(108, 99, 255, 0.15) 0%, rgba(108, 99, 255, 0.25) 100%);
+            padding: 3px 10px;
+            border-radius: 5px;
+            color: var(--primary);
+            font-weight: 600;
+            border-left: 4px solid var(--primary);
+        }
+
+        .progress-container {
+            background-color: #EDF2F7;
+            border-radius: 10px;
+            margin: 10px 0 5px;
+            height: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+            height: 100%;
+            width: 0;
+            transition: width 1.5s ease-out;
+            position: relative;
+        }
+
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, 
+                            rgba(255,255,255,0.8) 0%, 
+                            rgba(255,255,255,0) 50%, 
+                            rgba(255,255,255,0.8) 100%);
+            animation: shimmer 2s infinite;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .strength-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .strength-card {
+            background: white;
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+            border-bottom: 4px solid var(--primary);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .strength-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+            border-bottom-color: var(--secondary);
+        }
+
+        .strength-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: inline-block;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .strength-card:hover i {
+            transform: scale(1.15) rotate(5deg);
+            color: var(--accent);
+        }
+
+        .strength-title {
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .strength-desc {
+            font-size: 0.9rem;
+            color: var(--text);
+            opacity: 0.9;
+        }
+
+        .languages-container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .language-card {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+            width: 130px;
+        }
+
+        .language-card:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .language-flag {
+            font-size: 3rem;
+            margin-bottom: 12px;
+            line-height: 1;
+        }
+
+        .language-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+
+        .language-level {
+            font-size: 0.85rem;
+            color: var(--secondary);
+            font-weight: 500;
+        }
+
+        .link-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            background: linear-gradient(135deg, var(--primary), #8A7CFF);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 30px;
+            font-size: 1.05rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 18px rgba(108, 99, 255, 0.35);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(108, 99, 255, 0.45);
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                            transparent, 
+                            rgba(255,255,255,0.25), 
+                            transparent);
+            transition: 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn i {
+            font-size: 1.3rem;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 5px 15px rgba(108, 99, 255, 0.2);
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(108, 99, 255, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(108, 99, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(108, 99, 255, 0); }
+        }
+
+        .float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .profile-text {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            padding: 20px;
+            border-left: 5px solid var(--secondary);
+            border-radius: var(--border-radius);
+            background: linear-gradient(135deg, rgba(249, 250, 251, 0.9), rgba(239, 246, 255, 0.9));
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+        }
+        .profile-text:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+        }
+
+        .interests-list li {
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            padding-left: 30px;
+        }
+        .interests-list li i {
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            transition: transform 0.3s ease;
+        }
+        .interests-list li:hover i {
+            transform: scale(1.1);
+        }
+        .interests-list li::before {
+            content: none;
+        }
+
+        /* Sticky Chat Button */
+        .chat-ai-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            padding: 15px 25px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            animation: pulse 2s infinite, float 4s ease-in-out infinite;
+        }
+
+        .chat-ai-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(108, 99, 255, 0.5);
+        }
+
+        .chat-ai-btn i {
+            font-size: 1.4rem;
+            margin-right: 8px;
+        }
+
+        /* Chat Popup Modal */
+        .chat-popup {
+            display: none;
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            z-index: 1001;
+            width: 350px;
+            max-height: 500px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: slideUp 0.3s ease-out;
+        }
+
+        .chat-popup.active {
+            display: block;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Chat Container */
+        .chat-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .chat-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 15px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            text-align: center;
+            position: relative;
+        }
+
+        .chat-header h2 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .close-btn:hover {
+            transform: scale(1.2);
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            max-height: 400px;
+        }
+
+        .message {
+            margin-bottom: 10px;
+            padding: 8px 12px;
+            border-radius: 18px;
+            max-width: 70%;
+            font-size: 0.9rem;
+        }
+
+        .bot-message {
+            background-color: #e5e5ea;
+            align-self: flex-start;
+            margin-right: auto;
+        }
+
+        .user-message {
+            background: var(--primary);
+            color: white;
+            align-self: flex-end;
+            margin-left: auto;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .option-btn {
+            padding: 8px;
+            border: 1px solid var(--secondary);
+            background-color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 0.85rem;
+        }
+
+        .option-btn:hover {
+            background-color: #f0f0f0;
+        }
+
+        .chat-input {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
+
+        #user-input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            outline: none;
+            font-size: 0.9rem;
+        }
+
+        #send-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 8px 15px;
+            margin-left: 10px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        #send-btn:hover {
+            background: var(--secondary);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            header {
+                padding: 30px 15px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+            h1::after {
+                bottom: -5px;
+                height: 3px;
+                width: 50px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                margin: 30px 0 15px;
+            }
+            h2::after {
+                height: 3px;
+                width: 40px;
+            }
+
+            .tagline {
+                font-size: 1.1rem;
+            }
+
+            .skills-container, .strength-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .link-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .btn {
+                width: 100%;
+            }
+
+            .experience-item, .education-item, .skill-category, .strength-card, .language-card {
+                padding: 20px;
+            }
+
+            .job-title, .degree {
+                font-size: 1.1rem;
+            }
+            .company, .institution {
+                font-size: 0.95rem;
+            }
+            .date {
+                font-size: 0.8rem;
+            }
+            .profile-text {
+                font-size: 1rem;
+            }
+
+            .chat-popup {
+                width: 90%;
+                right: 5%;
+                bottom: 80px;
+            }
+
+            .chat-ai-btn {
+                bottom: 20px;
+                right: 20px;
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+                font-size: 10pt;
+                line-height: 1.4;
+                color: #333;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .container {
+                padding: 0;
+                max-width: 100%;
+            }
+
+            header {
+                background: linear-gradient(135deg, #667eea, #764ba2);
+                color: white;
+                box-shadow: none;
+                -webkit-print-color-adjust: exact;
+            }
+            header::before {
+                display: none;
+            }
+
+            h1, h2 {
+                color: #333 !important;
+                -webkit-print-color-adjust: exact;
+            }
+            h1::after, h2::after {
+                background: #FF6584 !important;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .contact-item {
+                background: transparent;
+                padding: 0;
+                border-radius: 0;
+                box-shadow: none;
+                backdrop-filter: none;
+                color: #555;
+            }
+            .contact-item i {
+                color: #888;
+            }
+
+            .experience-item, .education-item, .skill-category, .strength-card, .language-card {
+                box-shadow: none;
+                border: 1px solid #eee;
+                page-break-inside: avoid;
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+            .experience-item::after, .education-item::after {
+                background: linear-gradient(to bottom, #6C63FF, #00BFA6) !important;
+                -webkit-print-color-adjust: exact;
+            }
+            .skill-category {
+                border-left-color: #00BFA6 !important;
+                -webkit-print-color-adjust: exact;
+            }
+            .strength-card {
+                border-bottom-color: #6C63FF !important;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .btn, .pulse, .float, .chat-ai-btn, .chat-popup {
+                display: none;
+            }
+
+            .progress-bar {
+                width: auto !important;
+                background: #eee !important;
+                -webkit-print-color-adjust: exact;
+            }
+            .progress-bar::after {
+                display: none;
+            }
+
+            .highlight {
+                background: #e6e6ff !important;
+                color: #333 !important;
+                border-left-color: #6C63FF !important;
+                -webkit-print-color-adjust: exact;
+            }
+
+            @page {
+                margin: 0.8cm;
+            }
+            ul {
+                margin-left: 15px;
+            }
+            li::before {
+                font-size: 1rem;
+                left: -5px;
+            }
+        }
+
+        .cc {
+            font-size: 55px;
+            text-align: center;
+            color: #008AFF;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cc">
+            <u><i class="fas fa-"></i> My Resume</u>
+        </div>
+        <header>
+            <div>
+                <h1>Gameti Dhavalkumar Narayanbhai</h1>
+                <p class="tagline">Creative Data Specialist | Python Developer | Excel Analyst</p>
+            </div>
+            <div class="contact">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i> Aravalli, Gujarat
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i> +91-6351182748
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i> gametidhaval980@gmail.com
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe-asia"></i> Preferred: Ahmedabad/Gujarat
+                </div>
+            </div>
+        </header>
+
+        <div class="section">
+            <h2><i class="fas fa-user-tie"></i> PROFESSIONAL PROFILE</h2>
+            <div class="profile-text">
+                <p>"An innovation-driven data enthusiast with expertise in Python automation, Excel analytics, and CCC technical certification. Capable of transforming raw data into meaningful solutions through creative thinking and strong analytical skills. Eager to contribute to the development of modern data solutions."</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-laptop-code"></i> TECHNICAL SKILLS</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Data Mastery</h3>
+                    <ul>
+                        <li>Excel <span class="progress-container"><span class="progress-bar" data-width="85%"></span></span></li>
+                        <li>Data Visualization <span class="progress-container"><span class="progress-bar" data-width="75%"></span></span></li>
+                        <li>MIS Reporting <span class="progress-container"><span class="progress-bar" data-width="80%"></span></span></li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming</h3>
+                    <ul>
+                        <li>Python <span class="progress-container"><span class="progress-bar" data-width="70%"></span></span></li>
+                        <li>Automation <span class="progress-container"><span class="progress-bar" data-width="65%"></span></span></li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools</h3>
+                    <ul>
+                        <li>MS Office <span class="progress-container"><span class="progress-bar" data-width="90%"></span></span></li>
+                        <li>Google Sheets <span class="progress-container"><span class="progress-bar" data-width="85%"></span></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-graduation-cap"></i> EDUCATION</h2>
+            <div class="education-item">
+                <div class="degree"><i class="fas fa-university"></i> Bachelor of Arts (B.A.) - Ongoing</div>
+                <div class="company"><i class="fas fa-school"></i> K.R. Arts College Samalaji, Aravalli, Gujarat</div>
+                <div class="date"><i class="far fa-calendar-alt"></i> 2023 – Present (Expected Completion: 2026)</div>
+                <ul>
+                    <li>Currently pursuing Bachelor's degree with a focus on social sciences</li>
+                    <li>Participated in basic data and computer application coursework</li>
+                </ul>
+            </div>
+            <div class="education-item">
+                <div class="degree"><i class="fas fa-graduation-cap"></i> Higher Secondary (12th Grade)</div>
+                <div class="company"><i class="fas fa-school"></i> The Lusadiya Hischool, Lusadiya, Gujarat Board</div>
+                <div class="date"><i class="far fa-calendar-alt"></i> 2022 – 2023</div>
+                <ul>
+                    <li>Completed 12th in Arts stream with 75%</li>
+                    <li>Developed strong foundational knowledge in various subjects</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-project-diagram"></i> KEY PROJECTS</h2>
+            <div class="experience-item">
+                <div class="job-title"><i class="fas fa-file-excel"></i> Excel Automation System</div>
+                <ul>
+                    <li>Developed <span class="highlight">excel automation</span> for fast data entry</li>
+                    <li>Created interactive dashboards with <span class="highlight">dynamic visualizations</span></li>
+                </ul>
+                <div class="link-container">
+                    <a href="https://excelutomation.netlify.app/" target="_blank" class="btn pulse">
+                        <i class="fas fa-external-link-alt"></i> Excel Automation Demo
+                    </a>
+                    <a href="https://misvvv.netlify.app/" target="_blank" class="btn pulse">
+                        <i class="fas fa-external-link-alt"></i> MIS Dashboard Demo
+                    </a>
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="job-title"><i class="fab fa-python"></i> Python Data Processor</div>
+                <ul>
+                    <li>Built scripts to <span class="highlight">automate data cleaning</span> processes</li>
+                    <li>Implemented <span class="highlight">CSV to Excel</span> conversion tools</li>
+                    <li>Reduced manual data processing time by approximately 30%</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-star"></i> CORE STRENGTHS</h2>
+            <div class="strength-grid">
+                <div class="strength-card">
+                    <i class="fas fa-laptop-code float"></i>
+                    <div class="strength-title">Basic Programming</div>
+                    <div class="strength-desc">Proficient in Python scripting for task automation and data handling.</div>
+                </div>
+                <div class="strength-card">
+                    <i class="fas fa-file-excel float"></i>
+                    <div class="strength-title">Excel Handling</div>
+                    <div class="strength-desc">Expert in organizing, analyzing, and presenting data using advanced Excel functions.</div>
+                </div>
+                <div class="strength-card">
+                    <i class="fas fa-certificate float"></i>
+                    <div class="strength-title">Computer Skills</div>
+                    <div class="strength-desc">Certified in CCC, demonstrating a strong foundation in computer operations and applications.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-language"></i> LANGUAGES</h2>
+            <div class="languages-container">
+                <div class="language-card">
+                    <div class="language-flag">🇮🇳</div>
+                    <div class="language-name">Hindi</div>
+                    <div class="language-level">Fluent</div>
+                </div>
+                <div class="language-card">
+                    <div class="language-flag">🇮🇳</div>
+                    <div class="language-name">Gujarati</div>
+                    <div class="language-level">Native</div>
+                </div>
+                <div class="language-card">
+                    <div class="language-flag">🇬🇧</div>
+                    <div class="language-name">English</div>
+                    <div class="language-level">Intermediate</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-award"></i> CERTIFICATIONS</h2>
+            <div class="experience-item">
+                <ul>
+                    <li><i class="fas fa-certificate"></i> CCC Certificate – National Institute of Electronics & Information Technology</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-heart"></i> INTERESTS</h2>
+            <ul class="interests-list">
+                <li><i class="fab fa-python"></i> Learning new Python libraries (like Pandas, OpenPyXL) to expand data processing capabilities.</li>
+                <li><i class="fab fa-youtube"></i> Watching Tech & Data Analysis YouTube channels to stay updated on industry trends.</li>
+                <li><i class="fas fa-calculator"></i> Solving Excel formula challenges to enhance problem-solving and analytical skills.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-link"></i> MY WEBSITE</h2>
+            <div class="link-container">
+                <a href="https://password-streth-cheker.netlify.app/" target="_blank" class="btn">
+                    <i class="fas fa-lock"></i> Password Checker
+                </a>
+                <a href="https://typingclub.netlify.app/" target="_blank" class="btn">
+                    <i class="fas fa-keyboard"></i> Typing Club
+                </a>
+            </div>
+            <p style="margin-top: 20px; font-style: italic; color: var(--text);">
+                <i class="fas fa-info-circle"></i> Please check the "About" section on these websites for more details.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-address-card"></i> REFERENCES</h2>
+            <p>Available upon request</p>
+        </div>
+    </div>
+
+    <!-- Sticky Chat Button -->
+    <button id="chat-ai-btn" class="btn chat-ai-btn pulse">
+        <i class="fas fa-robot"></i> Chat with AI
+    </button>
+
+    <!-- Chatbot Popup Modal -->
+    <div id="chat-popup" class="chat-popup">
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2>Help Desk Chatbot</h2>
+                <button id="close-chat" class="close-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-messages" id="chat-messages"></div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type your message...">
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+    <footer style="text-align: center; padding: 20px; background-color: #f0f0f0;">
+    <p>Connect with mme:</p>
+
+    <a href="https://github.com/dhaval-gamet" target="_blank" style="margin: 0 10px;">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="30">
+    </a>
+
+    <a href="https://instagram.com/d_n_gameti" target="_blank" style="margin: 0 10px;">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="30">
+    </a>
+</footer>
+
+</body>
+</html>
